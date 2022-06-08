@@ -41,7 +41,7 @@ def macierz_k(macierz):
     return macierzk
 
 
-def matrix_wartosci_wlasne(macierz):
+def wartosciwlasne(macierz):
     macierzwartosciwlasnych = macierz
     while (np.diag(macierzwartosciwlasnych)-np.dot(macierzwartosciwlasnych, np.ones((macierzwartosciwlasnych.shape[0], 1))).T).all() > 0.0001:
         macierzwartosciwlasnych = macierz_k(macierzwartosciwlasnych)
@@ -55,6 +55,6 @@ macierz_testowa = np.array([[1., 3., 5., 7., 9.],
                             [9., 7., 9., 9., 9.]
                             ])
 print(macierz_testowa)
-print(matrix_wartosci_wlasne(macierz_testowa))
-print(np.diag(matrix_wartosci_wlasne(macierz_testowa)))
+print(wartosciwlasne(macierz_testowa))
+print(np.diag(wartosciwlasne(macierz_testowa)))
 print(np.linalg.eigvals(macierz_testowa))
