@@ -24,25 +24,22 @@ def projekcja(u, v):
 
 
 def rozkladqr(macierz):
-    macierzv = [[x[i] for x in macierz]
-                for i in range(len(macierz[1]))]
+    macierzv = macierz.T
     macierzu = []
     macierzq = []
-
     for wektorv in macierzv:
-        wektorv = np.array(wektorv)
-        projekcjawektora = NULL
-        for wektorzmacierzyu in macierzu:
-            projekcjawektora += projekcja(wektorzmacierzyu, wektorv)
-        wektoru = wektorv - projekcjawektora
+        suma = 0
+        for wektoru in macierzu:
+            suma += projekcja(wektoru, wektorv)
+        wektoru = wektorv - suma
         macierzu.append(wektoru)
-        dlugoscu = dlugosc(wektoru)
-        if dlugoscu != 0:
-            macierzq.append(wektoru/dlugoscu)
+        if dlugosc(wektoru) == 1:
+            wektore = wektoru
         else:
-            macierzq.append(wektoru)
-        Q = np.array(macierzq).T
-        R = np.dot(Q.T, macierz)
+            wektore = wektoru * (1 / dlugosc(wektoru))
+        macierzq.append(wektore)
+    Q = np.array(macierzq).T
+    R = np.dot(Q.T, macierz)
     return Q, R
 
 
