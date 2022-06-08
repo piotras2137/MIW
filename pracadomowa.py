@@ -68,8 +68,7 @@ for i in range(0, len(norm)):
         if abs(norm[i][j]) > 1:
             ortnorm = False
             break
-print(norm)
-
+print(np.dot(dot, BT))
 if ortnorm:
     print("macierz jest ortonormalna")
 else:
