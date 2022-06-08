@@ -10,3 +10,5 @@ metody inżynierii wiedzy
 - lab 5 -> [calkowanie, monte carlo i kwadratami](lab5/calkowanie.py)
 - lab 6 -> [srednia, wariancja, odchylenie standardowe](lab6/prackadomowa.py)
 - lab 7 -> [regresja liniowa](lab7/regresjaliniowa.py)
+- lab 8 -> [rozkład qr](lab8/rozkladqr.py)
+- lab 11 ->[bazy wektora](lab11/pracadomowa.py)
