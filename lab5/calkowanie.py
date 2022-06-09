@@ -56,7 +56,7 @@ def standard_deviation(list1):
 
 
 
-
+# calkowanie kwadratowe
 def rectint(f,a,b,rectangles):
     cumulative_area=0
 
@@ -78,7 +78,7 @@ def rectint(f,a,b,rectangles):
 
     return cumulative_area
 
-
+# calkowanie metoda monte carlo
 def mc_integrate(func, a, b, n = 1000):
     # Monte Carlo integration between x1 and x2 of given function from a to b
     
@@ -90,10 +90,9 @@ def mc_integrate(func, a, b, n = 1000):
     
     return integ
 
-
+# funkcja do calkowania
 def foo(x):
-    # return x**2 + 2*x   # to jest funkcja
-    return (x**3+ 3*x**2)/3   # to jest całka powyzszej
+    return (x**3+ 3*x**2)/3   # to jest całka do zrobienia
 
 
 print(rectint(foo, 4,7,100000))
