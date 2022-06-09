@@ -12,5 +12,6 @@ metody inżynierii wiedzy
 - lab 7 -> [regresja liniowa](lab7/regresjaliniowa.py)
 - lab 8 -> [rozkład qr](lab8/rozkladqr.py)
 - lab 9 -> [wartości własne macierzy](lab9/zadania.py)
-- lab 10 ->[macierze metoda gausa](lab10/)
+- lab 10 ->[macierze metoda gausa](lab10/metodagausa.py)
 - lab 11 ->[bazy wektora](lab11/pracadomowa.py)
+- lab 12 ->[rozklad svd](lab12/rozkladsvd.py)
